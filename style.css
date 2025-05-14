@@ -437,20 +437,16 @@ nav .fa-solid{
         padding: 30px;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center;   
+    }
+    .location iframe{
+        border-radius: 10px;
     }
 }
 
 #message{
     margin-top: -30px;
     color: #61b752;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.location{
-    width: 100%;
-    padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;

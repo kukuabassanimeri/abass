@@ -442,3 +442,9 @@ nav .fa-solid{
     justify-content: center;
     align-items: center;
 }
+.location{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

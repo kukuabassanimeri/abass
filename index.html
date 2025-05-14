@@ -1,0 +1,190 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abass-portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/caeb9ec53e.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="media/code.jpeg">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!--Header-->
+    <div id="header">
+        <!--Navigation-->
+        <div class="container">
+            <nav>
+                <h1 class="logo"><span>A</span>bass</h1>
+                <ul id="side-menu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">service</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">contact</a></li>
+
+                    <!--closed menubar-->
+                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                </ul>
+                <!--Menu bar-->
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            </nav>
+
+            <!--Header text-->
+            <div class="header-text">
+                <p>Software Developer <br> & Entrepreneur</p>
+                <h4>Hi, I'm <span>Abass</span> Kuku <br>from Nairobi</h4>
+            </div>
+        </div>
+    </div>
+
+    <!--About-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="media/phone-screen.jpg" alt="about image">
+                </div>
+                <div class="about-col-2">
+                    <h4 class="sub-title">About Me</h4>
+                    <p class="description">Abass is an entrepreneur and aspiring full-stack developer, currently based
+                        in Kenya at KCA University as well as African Leadership University with a strong passion for
+                        full-stack development abd entrepreneurial skills.
+                        <br>
+                        Equipped with hands-on experience in various programming languages and
+                        technologies.
+                        <br>
+                        I am driven by a desire to create innovative and user-centric solutions. Eager to
+                        leverage my skills and knowledge to contribute effectively to challenging projects and continue
+                        learning and growing in the field of software development.
+                        <br>
+                        Furthermore, Abass is driven by a mission to transform the educational landscape for refugees
+                        and IDPs in Kakuma.
+                        <br>
+                        His goal is to develop applications that provide better access to
+                        educational opportunities, enabling refugee youths to realize their potential and build hopeful
+                        futures.
+                    </p>
+
+                    <!--Work, education and skills-->
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+
+                    <!--work, education, skills content -->
+
+                    <!--Skills-->
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI?UX</span><br>Design Web/App Interfaces</li>
+                            <li><span>Web Developement</span><br>Web App Developement</li>
+                            <li><span>App Developement</span><br>Building Andriod/iOS Apps</li>
+                        </ul>
+                    </div>
+
+                    <!--Experience-->
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Sept 2024 - Dec 2024</span><br>Assistant Operation Manager Intern <br> Humanity
+                                Hands - Kakuma Kenya</li>
+                            <li><span>Sept 2023 - Dec 2023</span><br>IT Assistant Intern <br>Kadar Initiative for
+                                Community Empowerment - Kakuma Kenya</li>
+                            <li><span>Feb 2020 - Dec 2022 </span><br>Windle International Kenya - Kakuma Kenya</li>
+                        </ul>
+                    </div>
+
+                    <!--Education-->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2026</span><br>BSc Entrepreneurial Leadership <br> African Leadership University -
+                                Kigali Rwanda</li>
+                            <li><span>2026</span><br>BSc Software Development <br>Kenya College of Accountancy - Nairobi
+                                Kenya </li>
+                            <li><span>2019</span><br>KCSE Certification <br> Busombi Muslim Mix - Kakamega Kenya </li>
+                            <li><span>2015</span><br>KCPE Certification <br> Shambe Primary School - Kakuma Kenya </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--services-->
+    <div id="services">
+        <div class="container">
+            <h4 class="sub-title">My Services</h4>
+            <div class="services-list">
+
+                <!--Inject js code here for my services-->
+
+            </div>
+        </div>
+    </div>
+
+    <!--Porfolio-->
+    <div id="portfolio">
+        <div class="container">
+            <h4 class="sub-title">My Work</h4>
+            <div class="work-list">
+
+                <!--Inject Js code Here for work done-->
+
+            </div>
+            <!--See more work-->
+            <button class="see-more-btn btn-see" id="see-more-btn" onclick="togglePortfolio()">See More</button>
+        </div>
+    </div>
+
+    <!--contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <!--left column-->
+                <div class="contact-left">
+                    <h4 class="sub-title">Contact Me</h4>
+                    <p> <i class="fa-solid fa-paper-plane"></i> abasskuku@gmail.com</p>
+                    <p> <i class="fa-solid fa-square-phone"></i> +254115207210</p>
+
+                    <!--social links-->
+                    <div class="social-icons">
+
+                        <!--Inject js code here for social links-->
+
+                    </div>
+
+                    <!--Download cv-->
+                    <a href="/media/ABASS RESUME.docx.pdf" class="see-more-btn btn-resume" download>Download Resume</a>
+                </div>
+
+                <!--right column-->
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Full Name" required>
+                        <input type="email" name="Email" placeholder="Email Address" required>
+                        <textarea name="Message" rows="6" placeholder="Message"></textarea>
+
+                        <button type="submit" class="see-more-btn btn-submit">Submit</button>
+                    </form>
+
+                    <!--form submission confirmation-->
+                    <span id="message"></span>
+                </div>
+            </div>
+        </div>
+
+        <!--Copyright-->
+        <div class="copy-right">
+            <p>Copyright © Abass | This portfolio is made with <i class="fa-solid fa-heart"></i> by Abass</p>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -430,6 +430,9 @@ nav .fa-solid{
         height: 380px;
 
     }
+    .see-more-btn.btn-see{
+        width: 100%;
+    }
 }
 
 #message{

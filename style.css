@@ -433,6 +433,12 @@ nav .fa-solid{
     .see-more-btn.btn-see{
         width: 100%;
     }
+    .location{
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 #message{
@@ -443,8 +449,12 @@ nav .fa-solid{
     align-items: center;
 }
 .location{
+    width: 100%;
     padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.location{
+    content: "";
 }

@@ -111,7 +111,7 @@ function togglePortfolio(){
         img: "media/abass.jpg",
         title: "Portfolio",
         description: "Abass' portfolio that showcases his work",
-        link: "https://abassy.vercel.app/",
+        link: "https://github.com/kukuabassanimeri/abass.git",
     },
 
     {

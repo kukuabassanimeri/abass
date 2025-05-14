@@ -111,7 +111,7 @@ function togglePortfolio(){
         img: "media/abass.jpg",
         title: "Portfolio",
         description: "Abass' portfolio that showcases his work",
-        link: "https://abasskuku319.wixsite.com/latjorwuon",
+        link: "https://abassy.vercel.app/",
     },
 
     {

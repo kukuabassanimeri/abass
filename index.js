@@ -329,4 +329,19 @@ const aboutContent = {
   }
   renderAboutSection(aboutContent);
 
+  //* Prevent copy and paste
+  ['copy', 'paste', 'cut'].forEach(event => {
+    document.addEventListener(event, e => e.preventDefault());
+  });
+  
+  //*
+  ['copy', 'paste', 'cut'].forEach(event => {
+    document.addEventListener(event, e => {
+      e.preventDefault();
+      alert(`The "${event}" action is disabled on this page.`);
+    });
+  });
+    
+
+
   

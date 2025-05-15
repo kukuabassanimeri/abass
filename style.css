@@ -441,6 +441,7 @@ nav .fa-solid{
     }
     .location iframe{
         border-radius: 10px;
+        height: 200px;
     }
     
 }
@@ -453,5 +454,14 @@ nav .fa-solid{
     align-items: center;
 }
 .location{
-    content: "";
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
 }
+.location iframe{
+    border-radius: 10px;
+    height: 200px;
+    width: 100%;
+}
+

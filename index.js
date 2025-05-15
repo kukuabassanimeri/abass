@@ -44,7 +44,7 @@ form.addEventListener('submit', e => {
         formSubmission.innerHTML = "Message sent successfully";
         setTimeout(function(){
             formSubmission.innerHTML = "";
-        }, 2000)
+        }, 1000)
         form.reset() //* clear the input fields
     })
     .catch(error => console.error('Error!', error.message))

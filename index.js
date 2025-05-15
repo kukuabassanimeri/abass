@@ -329,12 +329,7 @@ const aboutContent = {
   }
   renderAboutSection(aboutContent);
 
-  //* Prevent copy and paste
-  ['copy', 'paste', 'cut'].forEach(event => {
-    document.addEventListener(event, e => e.preventDefault());
-  });
-  
-  //*
+  //* Prevent copy, cut and paste
   ['copy', 'paste', 'cut'].forEach(event => {
     document.addEventListener(event, e => {
       e.preventDefault();

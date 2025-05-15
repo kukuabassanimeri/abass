@@ -367,6 +367,12 @@ nav .fa-solid{
         font-size: 20px;
     }
 
+    #side-menu{
+        position: fixed;
+        right: -200px;
+        transition: right 0.5s ease;
+    }
+    
     /* hide ul li on small screen */
     nav ul{
         background: #ff004f;
@@ -464,4 +470,3 @@ nav .fa-solid{
     height: 200px;
     width: 100%;
 }
-

@@ -25,6 +25,13 @@ function closeMenu(){
     sideMenu.style.right = "-200px";
 }
 
+//* automatically close the menu when target item is clicked
+document.querySelectorAll("#side-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        setTimeout(closeMenu, 1000);
+    });
+});
+
 //* form connection
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzlIo3uTVedzvIX0hb8Sk02IJZbbT_Xz3XRbfjsmcslwb-tRpo8hgZDmYAW73x92GmK/exec';
 const form = document.forms['submit-to-google-sheet']

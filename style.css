@@ -155,7 +155,7 @@ nav ul li a:hover::after{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .services-list div{
     background: #262626;
@@ -194,7 +194,7 @@ nav ul li a:hover::after{
 
     /* grid-template-columns - specifies the number (and the widths) of columns in a grid layout */
     grid-gap: 40px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .work{
     border-radius: 10px;
@@ -410,7 +410,7 @@ nav .fa-solid{
     }
 
     #about{
-        padding: 10px;
+        padding: 2px;
     }
     
     .tab-links{
@@ -442,6 +442,7 @@ nav .fa-solid{
     .location iframe{
         border-radius: 10px;
     }
+    
 }
 
 #message{

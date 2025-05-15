@@ -364,13 +364,17 @@ nav .fa-solid{
         width: 100%;
         height: 100vh;
         background-image: url(media/bg-image.jpg);
-        background-position: center;
+        background-position: top center;
         background-size: contain;
         background-repeat: no-repeat;
+        padding-top: 0;
 
     }
+   #about{
+    margin-top: -150px;
+   }
     .header-text{
-        margin-top: 100%;
+        margin-top: 60%;
         font-size: 16px;
     }
     .header-text h1{

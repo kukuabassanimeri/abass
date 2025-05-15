@@ -269,9 +269,9 @@ const aboutContent = {
         { span: "App Development", text: "Building Android/iOS Apps" },
       ],
       Experience: [
-        { span: "Sept 2024 - Dec 2024", text: "Assistant Operation Manager Intern <br> Humanity Hands - Kakuma Kenya" },
-        { span: "Sept 2023 - Dec 2023", text: "IT Assistant Intern <br>Kadar Initiative for Community Empowerment - Kakuma Kenya" },
-        { span: "Feb 2020 - Dec 2022", text: "Teacher <br>Windle International Kenya - Kakuma Kenya" },
+        { span: "September 2024 - December 2024", text: "Assistant Operation Manager Intern <br> Humanity Hands - Kakuma Kenya" },
+        { span: "September 2023 - December 2023", text: "IT Assistant Intern <br>Kadar Initiative for Community Empowerment - Kakuma Kenya" },
+        { span: "Feburary 2020 - December 2022", text: "Teacher <br>Windle International Kenya - Kakuma Kenya" },
       ],
       Education: [
         { span: "2026", text: "BSc Entrepreneurial Leadership <br>African Leadership University - Kigali Rwanda" },

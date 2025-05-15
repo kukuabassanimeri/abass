@@ -246,3 +246,98 @@ socialIcon.forEach(social => {
     socialLink.innerHTML = `<i class="${social.icon}"></i>`;
     socialLinks.appendChild(socialLink);
 });
+
+//* about content
+const aboutContent = {
+    imageSrc: "media/phone-screen.jpg",
+    title: "About Me",
+    description: `
+      I am an aspiring Full-stack Developer and Entrepreneur, currently in my third year at KCA University, Nairobi Kenya pursuing a Bachelor of Science in Software Development. 
+      I am also enrolled at the African Leadership University in Kigali Rwanda, where I study Bsc Entrepreneurial Leadership.
+      <br><br>
+      I have a strong passion for full-stack development and entrepreneurship, backed by hands-on experience in various programming languages and technologies. 
+      I am driven to create innovative, user-centered solutions that address real-world challenges.
+      <br><br>
+      My mission is to transform the educational landscape for refugees and internally displaced persons in Kakuma camp. 
+      I aim to build applications that expand access to education and entrepreneurial skills, empowering refugee youth to unlock their potential and create brighter futures.
+      <br>
+      Join me in this journey to better the lives of refugees.
+    `,
+    tabs: ["Skills", "Experience", "Education", "Awards"],
+    contents: {
+      Skills: [
+        { span: "UI/UX", text: "Design Web/App Interfaces" },
+        { span: "Web Development", text: "Web App Development" },
+        { span: "App Development", text: "Building Android/iOS Apps" },
+      ],
+      Experience: [
+        { span: "Sept 2024 - Dec 2024", text: "Assistant Operation Manager Intern <br> Humanity Hands - Kakuma Kenya" },
+        { span: "Sept 2023 - Dec 2023", text: "IT Assistant Intern <br>Kadar Initiative for Community Empowerment - Kakuma Kenya" },
+        { span: "Feb 2020 - Dec 2022", text: "Teacher <br>Windle International Kenya - Kakuma Kenya" },
+      ],
+      Education: [
+        { span: "2026", text: "BSc Entrepreneurial Leadership <br>African Leadership University - Kigali Rwanda" },
+        { span: "2026", text: "BSc Software Development <br>Kenya College of Accountancy - Nairobi Kenya" },
+        { span: "2019", text: "KCSE Certification <br>Busombi Muslim Mix - Kakamega Kenya" },
+        { span: "2015", text: "KCPE Certification <br>Shambe Primary School - Kakuma Kenya" },
+      ],
+      Awards: [
+        { span: "October 2024", text: "eMobilis Mastercard <br>Web Development Scholarship" },
+        { span: "February 2024", text: "Power Learn Project <br>Web Development Scholarship" },
+        { span: "May 2023", text: "Ghana Tech Lab<br>Skills for Digital Inclusion" },
+        { span: "September 2022", text: "Mastercard Foundation Scholarship <br>Undergraduate at ALU" },
+        { span: "September 2022", text: "DAFI Scholarship <br>Undergraduate at KCAU" },
+      ]
+    }
+  };
+
+  //* function to load about
+  function renderAboutSection(data) {
+    const main = document.getElementById("main");
+  
+    const tabsHtml = data.tabs.map((tab, i) => 
+      `<p class="tab-links ${i === 0 ? "active-link" : ""}" onclick="openTab('${tab.toLowerCase()}')">${tab}</p>`
+    ).join("");
+  
+    const contentsHtml = Object.entries(data.contents).map(([key, items], i) => {
+      const listItems = items.map(item => `<li><span>${item.span}</span><br>${item.text}</li>`).join("");
+      return `
+        <div class="tab-contents ${i === 0 ? "active-tab" : ""}" id="${key.toLowerCase()}">
+          <ul>${listItems}</ul>
+        </div>
+      `;
+    }).join("");
+  
+    main.innerHTML = `
+      <div id="about">
+        <div class="container">
+          <div class="row">
+            <div class="about-col-1">
+              <img src="${data.imageSrc}" alt="about image">
+            </div>
+            <div class="about-col-2">
+              <h4 class="sub-title">${data.title}</h4>
+              <p class="description">${data.description}</p>
+  
+              <div class="tab-titles">${tabsHtml}</div>
+              ${contentsHtml}
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+  renderAboutSection(aboutContent);
+
+//* function to switch tabs
+function openTab(tabName) {
+  const tabs = document.querySelectorAll(".tab-links");
+  const contents = document.querySelectorAll(".tab-contents");
+
+  tabs.forEach(tab => tab.classList.remove("active-link"));
+  contents.forEach(tab => tab.classList.remove("active-tab"));
+
+  event.currentTarget.classList.add("active-link");
+  document.getElementById(tabName).classList.add("active-tab");
+}
+  

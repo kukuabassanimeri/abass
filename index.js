@@ -1,5 +1,3 @@
-//* Variable Declaration
-
 //* About section
 var tabLinks = document.getElementsByClassName("tab-links");
 var tabContents = document.getElementsByClassName("tab-contents");
@@ -105,13 +103,6 @@ function togglePortfolio(){
         title: "MedEase",
         description: "A Web based application that allow Kakuma residents to book medication queue online",
         link: "https://github.com/kukuabassanimeri/MedEase.git",
-    },
-
-    {
-        img: "media/latjor.jpeg",
-        title: "Portfolio",
-        description: "A portfolio for Latjor Woum Lat to showcase his work and aspiration.",
-        link: "https://abasskuku319.wixsite.com/latjorwuon",
     },
 
     {

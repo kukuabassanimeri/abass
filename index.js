@@ -54,46 +54,48 @@ form.addEventListener('submit', e => {
 let currenVisible = 3;
 let isExpanded = false;
 
-function togglePortfolio(){
-    const works = document.querySelectorAll(".work-item");
-    const btn = document.getElementById("see-more-btn");
+function togglePortfolio() {
+  const works = document.querySelectorAll(".work-item");
+  const btn = document.getElementById("see-more-btn");
 
-    if(!isExpanded){
-        for (let i = currenVisible; i < works.length; i++) {
-            works[i].style.display = "block";
-        }
-        btn.textContent = "Show Less";
-        isExpanded = true;
+  if (!isExpanded) {
+    for (let i = currenVisible; i < works.length; i++) {
+      works[i].style.display = "block";
     }
-    else{
-        works.forEach((item, index) => {
-            item.style.display = index < 3 ? "block" : "none";
-        });
-        btn.textContent = "Show More";
-        isExpanded = false;
-    }
+    btn.textContent = "Show Less";
+    isExpanded = true;
+  } else {
+    works.forEach((item, index) => {
+      item.style.display = index < 3 ? "block" : "none";
+    });
+    btn.textContent = "Show More";
+    isExpanded = false;
+  }
 }
 
- //* Initial load for small screens
- function initPortfolioDisplay() {
-    const works = document.querySelectorAll(".work-item");
-    const btn = document.getElementById("see-more-btn");
+//* Always show only first 3 items on load, regardless of screen size
+function initPortfolioDisplay() {
+  const works = document.querySelectorAll(".work-item");
+  const btn = document.getElementById("see-more-btn");
 
-    if (window.innerWidth <= 480) {
-      works.forEach((item, index) => {
-        item.style.display = index < 3 ? "block" : "none";
-      });
-      btn.style.display = "inline-block";
-      btn.textContent = "Show More";
-      currenVisible = 3;
-      isExpanded = false;
-    } else {
-      works.forEach(item => item.style.display = "block");
-    }
+  works.forEach((item, index) => {
+    item.style.display = index < 3 ? "block" : "none";
+  });
+
+  //* Show the button only if there are more than 3 items
+  if (works.length > 3) {
+    btn.style.display = "inline-block";
+    btn.textContent = "Show More";
+    currenVisible = 3;
+    isExpanded = false;
+  } else {
+    btn.style.display = "none";
   }
+}
 
-  window.addEventListener("load", initPortfolioDisplay);
-  window.addEventListener("resize", initPortfolioDisplay);
+//* Call the function
+window.addEventListener("load", initPortfolioDisplay);
+
 
   //* Portfolio work
   const workServices = [

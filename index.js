@@ -329,15 +329,4 @@ const aboutContent = {
   }
   renderAboutSection(aboutContent);
 
-//* function to switch tabs
-function openTab(tabName) {
-  const tabs = document.querySelectorAll(".tab-links");
-  const contents = document.querySelectorAll(".tab-contents");
-
-  tabs.forEach(tab => tab.classList.remove("active-link"));
-  contents.forEach(tab => tab.classList.remove("active-tab"));
-
-  event.currentTarget.classList.add("active-link");
-  document.getElementById(tabName).classList.add("active-tab");
-}
   

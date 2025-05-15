@@ -307,9 +307,18 @@ nav ul li a:hover::after{
     display: inline-block;
     background: #ff004f;
 }
+
+/* see ore button */
+.see-more{
+    display: flex;
+    justify-content: center;
+}
 .see-more-btn.btn-see{
     background: #ff004f;
+    cursor: pointer;
+    text-align: center;
 }
+
 /* contact form */
 .contact-right form{
     width: 100%;
@@ -372,14 +381,14 @@ nav .fa-solid{
         right: -200px;
         transition: right 0.5s ease;
     }
-    
+
     /* hide ul li on small screen */
     nav ul{
         background: #ff004f;
         position: fixed;
         top: 0;
         right: -200px;
-        /*hidesthenavbars*/width: 200px;
+        width: 200px;
         height: 100vh;
         padding-top: 50px;
         z-index: 2;

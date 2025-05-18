@@ -249,7 +249,7 @@ socialIcon.forEach(social => {
 
 //* about content
 const aboutContent = {
-    imageSrc: "media/phone-screen.jpg",
+    // imageSrc: "media/phone-screen.jpg",
     title: "About Me",
     description: `
       I am an aspiring Full-stack Developer and Entrepreneur, currently in my third year at KCA University, Nairobi Kenya pursuing a Bachelor of Science in Software Development. 
@@ -313,7 +313,7 @@ const aboutContent = {
         <div class="container">
           <div class="row">
             <div class="about-col-1">
-              <img src="${data.imageSrc}" alt="about image">
+              
             </div>
             <div class="about-col-2">
               <h4 class="sub-title">${data.title}</h4>

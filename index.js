@@ -276,10 +276,10 @@ const aboutContent = {
         { span: "Feburary 2020 - December 2022", text: "Teacher <br>Windle International Kenya - Kakuma Kenya" },
       ],
       Education: [
-        { span: "2026", text: "BSc Entrepreneurial Leadership <br>African Leadership University - Kigali Rwanda" },
-        { span: "2026", text: "BSc Software Development <br>Kenya College of Accountancy - Nairobi Kenya" },
-        { span: "2019", text: "KCSE Certification <br>Busombi Muslim Mix - Kakamega Kenya" },
-        { span: "2015", text: "KCPE Certification <br>Shambe Primary School - Kakuma Kenya" },
+        { span: "2026", text: "BSc Entrepreneurial Leadership <br>African Leadership University" },
+        { span: "2026", text: "BSc Software Development <br>Kenya College of Accountancy" },
+        { span: "2019", text: "KCSE Certification <br>Busombi Muslim Mix" },
+        { span: "2015", text: "KCPE Certification <br>Shambe Primary School" },
       ],
       Awards: [
         { span: "October 2024", text: "eMobilis Mastercard <br>Web Development Scholarship" },

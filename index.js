@@ -101,6 +101,27 @@ window.addEventListener("load", initPortfolioDisplay);
   const workServices = [
 
     {
+        img: "media/niger.jpg",
+        title: "Niger's Education",
+        description: "A research paper showing education system in Niger",
+        link: "https://docs.google.com/document/d/1oE7ogfKx63-AK9VI3juBt8LYzDSlTWzM5xgeEbfg9Bs/edit?usp=sharing",
+    },
+
+    {
+        img: "media/shre.jpg",
+        title: "SHRE Program",
+        description: "Empowering adolescent girls for informed health choices at Kakuma",
+        link: "https://www.canva.com/design/DAGSp3MRj9g/4Rd2LVOLdDvjnU8KrCpogQ/edit?utm_content=DAGSp3MRj9g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+    },
+
+    {
+        img: "media/water.jpg",
+        title: "Water Scarcity",
+        description: "A pitch deck aimed at solving water scarcity in Turkana county",
+        link: "https://www.canva.com/design/DAGA5vxSMMo/z5LicyqZ05yirg3oPElXvg/edit?utm_content=DAGA5vxSMMo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+    },
+
+    {
         img: "media/doctor.png",
         title: "MedEase",
         description: "A Web based application that allow Kakuma residents to book medication queue online",

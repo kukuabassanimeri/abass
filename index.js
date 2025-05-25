@@ -284,7 +284,7 @@ const aboutContent = {
       <br>
       Join me in this journey to better the lives of refugees.
     `,
-    tabs: ["Skills", "Experience", "Education", "Awards"],
+    tabs: ["Skills", "Experience", "Education", "Awards", "Reflection", "Timeline"],
     contents: {
       Skills: [
         { span: "UI/UX", text: "Design Web/App Interfaces" },
@@ -308,7 +308,13 @@ const aboutContent = {
         { span: "May 2023", text: "Ghana Tech Lab<br>Skills for Digital Inclusion" },
         { span: "September 2022", text: "Mastercard Foundation Scholarship <br>Undergraduate at ALU" },
         { span: "September 2022", text: "DAFI Scholarship <br>Undergraduate at KCAU" },
-      ]
+      ],
+      Reflection: [
+        {span: "Leadership Reflection Essay", text: `<a href="media/ABASS_LEADERSHIP_REFLECTION_ESSAY.pdf" rel="noopener" target="_blank" style="color: #007bff; text-decoration: none;">View Here</a>`}
+      ],
+    Timeline: [
+      {span: "Entrepreneurial Leadership Timeline Diagram", text: `<a href="media/timeline.png" rel="noopener" target="_blank" style="color: #007bff; text-decoration: none;">View Here</a>`}
+    ]
     }
   };
 

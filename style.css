@@ -308,6 +308,7 @@ nav ul li a:hover::after{
 .see-more-btn.btn-resume{
     display: inline-block;
     background: #ff004f;
+    margin-right: 20px;
 }
 
 /* see ore button */
@@ -429,6 +430,10 @@ nav .fa-solid{
  
     .about-col-2{
         font-size: 14px;
+       
+    }
+    .tab-titles{
+         flex-wrap: wrap;
     }
 
     #about{

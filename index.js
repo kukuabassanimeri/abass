@@ -101,7 +101,7 @@ window.addEventListener("load", initPortfolioDisplay);
   const workServices = [
 
     {
-        img: "media/niger.jpg",
+        img: "media/Niger.jpg",
         title: "Niger's Education",
         description: "A research paper showing education system in Niger",
         link: "https://docs.google.com/document/d/1oE7ogfKx63-AK9VI3juBt8LYzDSlTWzM5xgeEbfg9Bs/edit?usp=sharing",

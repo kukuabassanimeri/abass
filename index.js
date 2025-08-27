@@ -99,28 +99,6 @@ window.addEventListener("load", initPortfolioDisplay);
 
   //* Portfolio work
   const workServices = [
-
-    {
-        img: "media/Niger.jpg",
-        title: "Niger's Education",
-        description: "A research paper showing education system in Niger",
-        link: "https://docs.google.com/document/d/1oE7ogfKx63-AK9VI3juBt8LYzDSlTWzM5xgeEbfg9Bs/edit?usp=sharing",
-    },
-
-    {
-        img: "media/shre.jpg",
-        title: "SHRE Program",
-        description: "Empowering adolescent girls for informed health choices at Kakuma",
-        link: "https://www.canva.com/design/DAGSp3MRj9g/4Rd2LVOLdDvjnU8KrCpogQ/edit?utm_content=DAGSp3MRj9g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
-    },
-
-    {
-        img: "media/water.jpg",
-        title: "Water Scarcity",
-        description: "A pitch deck aimed at solving water scarcity in Turkana county",
-        link: "https://www.canva.com/design/DAGA5vxSMMo/z5LicyqZ05yirg3oPElXvg/edit?utm_content=DAGA5vxSMMo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
-    },
-
     {
         img: "media/doctor.png",
         title: "MedEase",
@@ -270,7 +248,6 @@ socialIcon.forEach(social => {
 
 //* about content
 const aboutContent = {
-    // imageSrc: "media/phone-screen.jpg",
     title: "About Me",
     description: `
       I am an aspiring Full-stack Developer and Entrepreneur, currently in my third year at KCA University, Nairobi Kenya pursuing a Bachelor of Science in Software Development. 
@@ -284,7 +261,7 @@ const aboutContent = {
       <br>
       Join me in this journey to better the lives of refugees.
     `,
-    tabs: ["Skills", "Experience", "Education", "Awards", "Reflection", "Timeline"],
+    tabs: ["Skills", "Experience", "Education", "Awards"],
     contents: {
       Skills: [
         { span: "UI/UX", text: "Design Web/App Interfaces" },
@@ -309,12 +286,6 @@ const aboutContent = {
         { span: "September 2022", text: "Mastercard Foundation Scholarship <br>Undergraduate at ALU" },
         { span: "September 2022", text: "DAFI Scholarship <br>Undergraduate at KCAU" },
       ],
-      Reflection: [
-        {span: "Leadership Reflection Essay", text: `<a href="media/ABASS_LEADERSHIP_REFLECTION_ESSAY.pdf" rel="noopener" target="_blank" style="color: #007bff; text-decoration: none;">View Here</a>`}
-      ],
-    Timeline: [
-      {span: "Entrepreneurial Leadership Timeline Diagram", text: `<a href="media/timeline.png" rel="noopener" target="_blank" style="color: #007bff; text-decoration: none;">View Here</a>`}
-    ]
     }
   };
 

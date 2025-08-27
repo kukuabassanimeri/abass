@@ -100,6 +100,13 @@ window.addEventListener("load", initPortfolioDisplay);
   //* Portfolio work
   const workServices = [
     {
+        img: "media/logo.jpg",
+        title: "The Nubian Queens Initiative Limited",
+        description: "The Nubian Queens Empowerment Initiative Limited is Not-for-profit organization dedicated to uplift Nubian women and girls from war endurances.",
+        link: "https://github.com/kukuabassanimeri/The_Nubian_Queens_Empowerment_Initiative_limited",
+    },
+
+    {
         img: "media/doctor.png",
         title: "MedEase",
         description: "A Web based application that allow Kakuma residents to book medication queue online",
@@ -271,7 +278,7 @@ const aboutContent = {
       Experience: [
         { span: "September 2024 - December 2024", text: "Assistant Operation Manager Intern <br> Humanity Hands - Kakuma Kenya" },
         { span: "September 2023 - December 2023", text: "IT Assistant Intern <br>Kadar Initiative for Community Empowerment - Kakuma Kenya" },
-        { span: "Feburary 2020 - December 2022", text: "Teacher <br>Windle International Kenya - Kakuma Kenya" },
+        { span: "Feburary 2020 - December 2022", text: "High School Teacher <br>Windle International Kenya - Kakuma Kenya" },
       ],
       Education: [
         { span: "2026", text: "BSc Entrepreneurial Leadership <br>African Leadership University" },
@@ -280,11 +287,10 @@ const aboutContent = {
         { span: "2015", text: "KCPE Certification <br>Shambe Primary School" },
       ],
       Awards: [
-        { span: "October 2024", text: "eMobilis Mastercard <br>Web Development Scholarship" },
+        { span: "October 2024", text: "eMobilis <br>Web Development Mastercard Scholarship" },
         { span: "February 2024", text: "Power Learn Project <br>Web Development Scholarship" },
-        { span: "May 2023", text: "Ghana Tech Lab<br>Skills for Digital Inclusion" },
         { span: "September 2022", text: "Mastercard Foundation Scholarship <br>Undergraduate at ALU" },
-        { span: "September 2022", text: "DAFI Scholarship <br>Undergraduate at KCAU" },
+        { span: "September 2022", text: "DAFI Scholarship <br>Undergraduate at KCAU University" },
       ],
     }
   };

@@ -129,8 +129,8 @@ window.addEventListener("load", initPortfolioDisplay);
 
     {
         img: "media/educate.jpg",
-        title: "Lets-Educate-Kakuma",
-        description: "Django app for Kakuma residents to access scholarship opportunities",
+        title: "Camp 2 Campus",
+        description: "Django app that allow Kakuma refugee residents to access scholarship opportunities and application guidelines",
         link: "https://github.com/kukuabassanimeri/lets-educate-kakuma.git",
     },
 

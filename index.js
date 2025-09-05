@@ -282,7 +282,7 @@ const aboutContent = {
       ],
       Education: [
         { span: "2026", text: "BSc Entrepreneurial Leadership <br>African Leadership University" },
-        { span: "2026", text: "BSc Software Development <br>Kenya College of Accountancy" },
+        { span: "2026", text: "BSc Software Development <br>KCAU University" },
         { span: "2019", text: "KCSE Certification <br>Busombi Muslim Mix" },
         { span: "2015", text: "KCPE Certification <br>Shambe Primary School" },
       ],

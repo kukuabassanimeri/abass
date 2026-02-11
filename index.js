@@ -174,21 +174,14 @@ const myServices = [
     icon: "fa-solid fa-code",
     title: "Web Development",
     description:
-      "I provide professional web development services, including custom websites, responsive design and porfolio. By ensuring your site not only looks great but also performs effectively across all devices.",
+      "I provide professional web development services, including custom websites, responsive design and porfolio.",
   },
 
   {
     icon: "fa-solid fa-crop-simple",
     title: "UI/UX Design",
     description:
-      "I craft intuitive user experiences and visually appealing interfaces that enhance usability and engage your target audience. I focus on simplicity, consistency, and interaction flow.",
-  },
-
-  {
-    icon: "fa-brands fa-app-store-ios",
-    title: "App Design",
-    description:
-      "I design sleek, functional mobile app interfaces for both Android and iOS platforms. My approach ensures your app looks great and feels easy to use from the first tap.",
+      "I craft intuitive user experiences and visually appealing interfaces that enhance usability and engage your target audience.",
   },
 ];
 

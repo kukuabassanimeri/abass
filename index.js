@@ -168,37 +168,6 @@ workServices.forEach((work) => {
   workList.appendChild(workItem);
 });
 
-//* My services
-const myServices = [
-  {
-    icon: "fa-solid fa-code",
-    title: "Web Development",
-    description:
-      "I provide professional web development services, including custom websites, responsive design and porfolio.",
-  },
-
-  {
-    icon: "fa-solid fa-crop-simple",
-    title: "UI/UX Design",
-    description:
-      "I craft intuitive user experiences and visually appealing interfaces that enhance usability and engage your target audience.",
-  },
-];
-
-//* function to load my service
-const serviceList = document.querySelector(".services-list");
-myServices.forEach((service) => {
-  const serviceItem = document.createElement("div");
-  serviceItem.classList.add("fa-solid");
-
-  serviceItem.innerHTML = `
-      <i class="${service.icon}"></i>
-      <h5>${service.title}</h5>
-      <p>${service.description || service.desc}</p>
-    `;
-  serviceList.appendChild(serviceItem);
-});
-
 //* social links
 const socialIcon = [
   {
@@ -223,65 +192,196 @@ socialIcon.forEach((social) => {
   socialLinks.appendChild(socialLink);
 });
 
-//* about content
-const aboutContent = {
-  title: "About Me",
-  description: `
-      I am a motivated Software Developer with hands-on experience in web application development using Python, JavaScript, Django, React, HTML5, CSS3, and Bootstrap. I have expertise in backend development, RESTful API integration, database management with PostgreSQL, MySQL, and SQLite, and frontend optimization. I am eager to leverage my skills and knowledge in innovative software development teams.
-    `,
-  tabs: ["Skills"],
-  contents: {
-    Skills: [
-      { span: "UI/UX", text: "Web Design" },
-      { span: "Web Development", text: "Web Development" },
+//* ABOUT SECTION DATA
+const aboutCards = [
+  {
+    icon: "fa-solid fa-user",
+    title: "Who I'm",
+    description:
+      "I am a passionate Software Developer and Researcher focused on building impactful digital solutions that solve real-world challenges in education, technology, and community empowerment.",
+  },
+
+  {
+    icon: "fa-solid fa-graduation-cap",
+    title: "Education",
+    description:
+      "Software Development student at KCA University and Entrepreneurial Leadership student at African Leadership University with strong interest in innovation and leadership.",
+  },
+
+  {
+    icon: "fa-solid fa-lightbulb",
+    title: "Skills",
+    description:
+      "Frontend Development, Backend Development, REST APIs, Database Design, Research, Problem Solving, Leadership, and Technical Documentation.",
+  },
+
+  {
+    icon: "fa-solid fa-code",
+    title: "Technologies",
+    description:
+      "Python, Django, JavaScript, React, Bootstrap, HTML5, CSS3, PostgreSQL, MySQL, SQLite, Git, and GitHub.",
+  },
+];
+
+//* EXPERIENCE DATA
+const experiences = [
+  {
+    role: "Mobile Forensic Analyst Intern",
+    company: "DCI - ATPU",
+    duration: "January 2026 - April 2026",
+
+    responsibilities: [
+      "Documented 50+ exhibit cases, ensuring 90% accuracy in exhibit memo forms and maintaining proper chain of custody.",
+
+      "Designed and developed an Exhibit Management System that reduced manual record-keeping by 40%.",
+
+      "Performed mobile forensic data extraction and analysis on multiple device types, supporting investigative operations.",
     ],
   },
-};
 
-//* function to load about
-function renderAboutSection(data) {
+  {
+    role: "IT Assistant Intern",
+    company: "Kadar Initiative for Community Empowerment",
+    duration: "September 2023 - December 2023",
+
+    responsibilities: [
+      "Updated and maintained the organization’s website content, improving the accuracy and timeliness of information.",
+
+      "Designed digital flyers for community programs, contributing to increased event awareness and participation.",
+
+      "Supported the organization’s online presence by improving layout and content consistency.",
+    ],
+  },
+];
+
+//* RENDER ABOUT SECTION
+function renderAboutSection() {
   const main = document.getElementById("main");
 
-  const tabsHtml = data.tabs
+  const cards = aboutCards
     .map(
-      (tab, i) =>
-        `<p class="tab-links ${i === 0 ? "active-link" : ""}" onclick="openTab('${tab.toLowerCase()}')">${tab}</p>`,
+      (card) => `
+  
+    <div class="col-lg-3 col-md-6 mb-4">
+
+      <div class="about-card">
+
+        <div class="about-icon">
+          <i class="${card.icon}"></i>
+        </div>
+
+        <h4>${card.title}</h4>
+
+        <p>${card.description}</p>
+
+      </div>
+
+    </div>
+  
+  `,
     )
     .join("");
 
-  const contentsHtml = Object.entries(data.contents)
-    .map(([key, items], i) => {
-      const listItems = items
-        .map((item) => `<li><span>${item.span}</span><br>${item.text}</li>`)
-        .join("");
-      return `
-        <div class="tab-contents ${i === 0 ? "active-tab" : ""}" id="${key.toLowerCase()}">
-          <ul>${listItems}</ul>
+  //* EXPERIENCE HTML
+  const experienceHtml = experiences
+    .map(
+      (experience) => `
+
+    <div class="experience-item">
+
+      <div class="experience-dot"></div>
+
+      <div class="experience-content">
+
+        <div class="experience-header">
+
+          <h4>${experience.role}</h4>
+
+          <span>${experience.duration}</span>
+
         </div>
-      `;
-    })
+
+        <h5>${experience.company}</h5>
+
+        <ul>
+
+          ${experience.responsibilities
+            .map((item) => `<li>${item}</li>`)
+            .join("")}
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  `,
+    )
     .join("");
 
   main.innerHTML = `
-      <div id="about">
-        <div class="container">
-          <div class="row">
-            <div class="about-col-1">
-              
-            </div>
-            <div class="about-col-2">
-              <h4 class="sub-title">${data.title}</h4>
-              <p class="description">${data.description}</p>
   
-              <div class="tab-titles">${tabsHtml}</div>
-              ${contentsHtml}
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
+<section id="about">
+
+  <div class="container">
+
+    <!-- ABOUT TITLE -->
+    <div class="text-center mb-5">
+
+      <h2 class="about-title">
+        About Me
+      </h2>
+
+      <p class="about-subtitle">
+        Learn more about my background, education, skills, and technologies.
+      </p>
+
+    </div>
+
+    <!-- ABOUT CARDS -->
+    <div class="row">
+
+      ${cards}
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- EXPERIENCE SECTION -->
+<section id="experience">
+
+  <div class="container">
+
+    <!-- SECTION TITLE -->
+    <div class="text-center mb-5">
+
+      <h2 class="experience-title">
+        Experience
+      </h2>
+
+      <p class="experience-subtitle">
+        My professional journey and practical experiences in technology and digital innovation.
+      </p>
+
+    </div>
+
+    <!-- EXPERIENCE CARD -->
+    <div class="experience-card">
+
+      ${experienceHtml}
+
+    </div>
+
+  </div>
+
+</section>
+  
+`;
 }
-renderAboutSection(aboutContent);
+
+renderAboutSection();
 
 //* Prevent copy, cut and paste
 ["copy", "paste", "cut"].forEach((event) => {

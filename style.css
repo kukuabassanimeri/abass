@@ -893,3 +893,20 @@ body {
   }
 
 }
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .project-content {
+    padding: 25px;
+  }
+
+  .projects-title {
+    font-size: 2rem;
+  }
+
+}

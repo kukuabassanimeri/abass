@@ -1,36 +1,3 @@
-//* About section
-var tabLinks = document.getElementsByClassName("tab-links");
-var tabContents = document.getElementsByClassName("tab-contents");
-
-function openTab(tabname) {
-  //* argument should be any name
-  for (tabLink of tabLinks) {
-    tabLink.classList.remove("active-link");
-  }
-  for (tabContent of tabContents) {
-    tabContent.classList.remove("active-tab");
-  }
-  event.currentTarget.classList.add("active-link"); //* current item being clicked on
-  document.getElementById(tabname).classList.add("active-tab");
-}
-
-//* open and close menu function
-var sideMenu = document.getElementById("side-menu");
-
-function openMenu() {
-  sideMenu.style.right = "0";
-}
-function closeMenu() {
-  sideMenu.style.right = "-200px";
-}
-
-//* automatically close the menu when target item is clicked
-document.querySelectorAll("#side-menu a").forEach((link) => {
-  link.addEventListener("click", () => {
-    setTimeout(closeMenu, 1000);
-  });
-});
-
 //* form connection
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbzlIo3uTVedzvIX0hb8Sk02IJZbbT_Xz3XRbfjsmcslwb-tRpo8hgZDmYAW73x92GmK/exec";

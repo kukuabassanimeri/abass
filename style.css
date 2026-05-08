@@ -700,7 +700,6 @@ body {
 
 /* MOBILE */
 @media (max-width: 768px) {
-
   .contact-title {
     font-size: 2rem;
   }
@@ -709,7 +708,6 @@ body {
   .contact-form-card {
     padding: 25px;
   }
-
 }
 
 /* MOBILE */
@@ -729,21 +727,16 @@ body {
   background: #262626;
   border: 1px solid #00c853;
   color: #fff;
-
   padding: 12px 18px;
   border-radius: 12px;
-
   display: flex;
   align-items: center;
   gap: 10px;
-
   font-size: 14px;
   font-weight: 600;
-
+  min-width: 150px;
   box-shadow: 0 0 20px rgba(0, 200, 83, 0.15);
-
   animation: float 3s ease-in-out infinite;
-
   z-index: 2;
 }
 
@@ -756,7 +749,7 @@ body {
 /* LEFT CARD */
 .floating-left {
   top: 280px;
-  right: 350px;
+  right: 380px;
 }
 
 /* RIGHT CARD */
@@ -818,7 +811,6 @@ body {
 
 /* MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
-
   #header {
     background-position: top 100px center;
     background-size: 280px;
@@ -847,32 +839,6 @@ body {
   }
 
   /* FLOATING CARDS */
-.floating-card {
-  position: absolute;
-  background: #262626;
-  border: 1px solid #00c853;
-  color: #fff;
-
-  padding: 12px 18px;
-  border-radius: 12px;
-
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  font-size: 14px;
-  font-weight: 600;
-
-  min-width: 150px;
-
-  box-shadow: 0 0 20px rgba(0, 200, 83, 0.15);
-
-  animation: float 3s ease-in-out infinite;
-
-  z-index: 2;
-}
-
-  /* FLOATING CARDS */
   .floating-left {
     top: 180px;
     left: 20px;
@@ -891,12 +857,10 @@ body {
     border-radius: 10px;
     margin-top: 10px;
   }
-
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-
   .project-card {
     grid-template-columns: 1fr;
   }
@@ -908,5 +872,4 @@ body {
   .projects-title {
     font-size: 2rem;
   }
-
 }

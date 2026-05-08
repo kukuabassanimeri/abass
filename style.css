@@ -723,37 +723,6 @@ body {
   }
 }
 
-/* MOBILE RESPONSIVENESS */
-@media (max-width: 768px) {
-  #header {
-    background-position: center top;
-    background-size: cover;
-  }
-
-  .hero-section {
-    text-align: center;
-    padding-top: 100px;
-  }
-
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .hero-description {
-    font-size: 1rem;
-    margin: auto;
-    margin-bottom: 30px;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-
-  .hero-badge {
-    font-size: 12px;
-  }
-}
-
 /* FLOATING CARDS */
 .floating-card {
   position: absolute;
@@ -849,20 +818,78 @@ body {
 
 /* MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
+
   #header {
-    background-position: top center;
-    background-size: cover;
+    background-position: top 100px center;
+    background-size: 280px;
+    padding-top: 80px;
+    padding-bottom: 60px;
   }
 
-  .header-text {
-    padding-top: 180px;
+  .hero-section {
+    padding-top: 320px;
     text-align: center;
   }
 
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 15px;
+    margin: auto;
+    margin-bottom: 25px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* FLOATING CARDS */
+.floating-card {
+  position: absolute;
+  background: #262626;
+  border: 1px solid #00c853;
+  color: #fff;
+
+  padding: 12px 18px;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  min-width: 150px;
+
+  box-shadow: 0 0 20px rgba(0, 200, 83, 0.15);
+
+  animation: float 3s ease-in-out infinite;
+
+  z-index: 2;
+}
+
+  /* FLOATING CARDS */
+  .floating-left {
+    top: 180px;
+    left: 20px;
+  }
+
+  .floating-right {
+    top: 250px;
+    right: 20px;
+    bottom: auto;
+  }
+
+  /* MOBILE NAVBAR */
   .navbar-collapse {
     background: #111;
     padding: 20px;
     border-radius: 10px;
     margin-top: 10px;
   }
+
 }

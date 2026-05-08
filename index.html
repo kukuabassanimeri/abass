@@ -84,7 +84,8 @@
 
                     <!-- Small Description -->
                     <p class="hero-description">
-                        Software Developer & Researcher building scalable software solutions and conducting impactful research
+                        Software Developer & Researcher building scalable software solutions and conducting impactful
+                        research
                         focused on education, technology, and community empowerment.
                     </p>
 
@@ -109,22 +110,52 @@
         <!--Inject js code for about -->
     </main>
 
-    <!--Porfolio-->
-    <div id="portfolio">
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+
         <div class="container">
-            <h4 class="sub-title">My Work</h4>
-            <div class="work-list">
 
-                <!--Inject Js code for work done-->
+            <!-- Title -->
+            <div class="text-center mb-5">
+
+                <h2 class="projects-title">
+                    Projects
+                </h2>
+
+                <p class="projects-subtitle">
+                    Some of the software solutions and systems I have developed.
+                </p>
 
             </div>
 
-            <!--See more work-->
-            <div class="see-more">
-                <button class="see-more-btn btn-see" id="see-more-btn" onclick="togglePortfolio()">See More</button>
+            <!-- Carousel -->
+            <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- Inject JS Projects -->
+                <div class="carousel-inner" id="projects-container">
+
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel"
+                    data-bs-slide="prev">
+
+                    <span class="carousel-control-prev-icon"></span>
+
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel"
+                    data-bs-slide="next">
+
+                    <span class="carousel-control-next-icon"></span>
+
+                </button>
+
             </div>
+
         </div>
-    </div>
+
+    </section>
 
     <!--contact -->
     <div id="contact">

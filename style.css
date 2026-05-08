@@ -335,6 +335,151 @@ body {
   }
 }
 
+/* PROJECTS SECTION */
+#projects {
+  padding: 100px 0;
+  background: #000;
+}
+
+/* TITLE */
+.projects-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.projects-subtitle {
+  color: #bdbdbd;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+/* CARD */
+.project-card {
+  background: #1a1a1a;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  max-width: 1000px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  border: 1px solid transparent;
+
+  transition: 0.3s ease;
+}
+
+/* HOVER */
+.project-card:hover {
+  border-color: #00c853;
+
+  transform: translateY(-5px);
+
+  box-shadow: 0 0 25px rgba(0, 200, 83, 0.12);
+}
+
+/* IMAGE */
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.project-content {
+  padding: 40px;
+}
+
+/* TITLE */
+.project-content h3 {
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+/* SUBTITLE */
+.project-content h5 {
+  color: #00c853;
+  margin-bottom: 20px;
+}
+
+/* TECH */
+.project-tech {
+  background: rgba(0, 200, 83, 0.12);
+
+  color: #00c853;
+
+  padding: 10px 15px;
+
+  border-radius: 10px;
+
+  margin-bottom: 20px;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+/* DESCRIPTION */
+.project-content p {
+  color: #d0d0d0;
+
+  line-height: 1.8;
+
+  margin-bottom: 15px;
+}
+
+/* BUTTON */
+.project-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  background: #00c853;
+
+  color: #fff;
+
+  padding: 12px 24px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.project-btn:hover {
+  background: #00a844;
+
+  color: #fff;
+
+  transform: translateY(-3px);
+}
+
+/* CAROUSEL BUTTONS */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #00c853;
+
+  border-radius: 50%;
+
+  padding: 20px;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
   .about-title {

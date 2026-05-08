@@ -52,121 +52,115 @@ form.addEventListener("submit", (e) => {
     .catch((error) => console.error("Error!", error.message));
 });
 
-//* see more portfolio button
-let currenVisible = 3;
-let isExpanded = false;
-
-function togglePortfolio() {
-  const works = document.querySelectorAll(".work-item");
-  const btn = document.getElementById("see-more-btn");
-
-  if (!isExpanded) {
-    for (let i = currenVisible; i < works.length; i++) {
-      works[i].style.display = "block";
-    }
-    btn.textContent = "Show Less";
-    isExpanded = true;
-  } else {
-    works.forEach((item, index) => {
-      item.style.display = index < 3 ? "block" : "none";
-    });
-    btn.textContent = "Show More";
-    isExpanded = false;
-  }
-}
-
-//* Always show only first 3 items on load, regardless of screen size
-function initPortfolioDisplay() {
-  const works = document.querySelectorAll(".work-item");
-  const btn = document.getElementById("see-more-btn");
-
-  works.forEach((item, index) => {
-    item.style.display = index < 3 ? "block" : "none";
-  });
-
-  //* Show the button only if there are more than 3 items
-  if (works.length > 3) {
-    btn.style.display = "inline-block";
-    btn.textContent = "Show More";
-    currenVisible = 3;
-    isExpanded = false;
-  } else {
-    btn.style.display = "none";
-  }
-}
-
-//* Call the function
-window.addEventListener("load", initPortfolioDisplay);
-
-//* Portfolio work
-const workServices = [
+//* PROJECTS DATA
+const projects = [
   {
-    img: "media/logo.jpg",
-    title: "The Nubian Queens Initiative Limited",
+    img: "media/atpu.png",
+
+    title: "Exhibit Management System",
+
+    subtitle: "Anti-Terrorism Police Unit Project",
+
+    technologies:
+      "Python | Django REST APIs | JavaScript | React | Bootstrap | MySQL",
+
     description:
-      "The Nubian Queens Empowerment Initiative Limited is Not-for-profit organization dedicated to uplift Nubian women and girls from war endurances.",
-    link: "https://github.com/kukuabassanimeri/The_Nubian_Queens_Empowerment_Initiative_limited",
+      "Developed a full-stack web application to digitize and manage forensic exhibit records within the ATPU ICT department.",
+
+    github: "https://github.com/kukuabassanimeri",
+  },
+
+  {
+    img: "media/chatisha_kca.png",
+
+    title: "Chatisha KCA",
+
+    subtitle: "KCA University Final Year Project",
+
+    technologies: "Python | Django | JavaScript | HTML5 | Bootstrap | MySQL",
+
+    description:
+      "Designed and developed a complaint management system for KCA University to streamline communication between administration and students.",
+
+    github: "https://github.com/kukuabassanimeri",
   },
 
   {
     img: "media/doctor.png",
+
     title: "MedEase",
+
+    subtitle: "Healthcare Queue Reservation System",
+
+    technologies: "Python | Django | JavaScript | Bootstrap | SQLite",
+
     description:
-      "A Web based application that allow Kakuma residents to book medication queue online",
-    link: "https://github.com/kukuabassanimeri/MedEase.git",
-  },
+      "Developed a web-based healthcare queue reservation platform for Kakuma residents.",
 
-  {
-    img: "media/juice.jpg",
-    title: "Denval Juice",
-    description:
-      "Django app allowing KCAU students to suggest their own juice brand",
-    link: "https://github.com/kukuabassanimeri/denvaljuice.git",
-  },
-
-  {
-    img: "media/educate.jpg",
-    title: "Camp 2 Campus",
-    description:
-      "Django app that allow Kakuma refugee residents to access scholarship opportunities and application guidelines",
-    link: "https://github.com/kukuabassanimeri/lets-educate-kakuma.git",
-  },
-
-  {
-    img: "media/blazer2.jpg",
-    title: "Nike Shoe Ecommerce",
-    desc: "JavaScript Nike shoe Ecommerce application",
-    link: "https://github.com/kukuabassanimeri/JavaScripts.git",
-  },
-
-  {
-    img: "media/docs.jpg",
-    title: "Track MyDocs",
-    desc: "Django app to help Kakuma residents apply for ID documents",
-    link: "https://github.com/kukuabassanimeri/track_my_docs.git",
+    github: "https://github.com/kukuabassanimeri/MedEase.git",
   },
 ];
 
-//* function to load the work service
-const workList = document.querySelector(".work-list");
+//* RENDER PROJECTS
+function renderProjects() {
+  const projectsContainer = document.getElementById("projects-container");
 
-workServices.forEach((work) => {
-  const workItem = document.createElement("div");
-  workItem.classList.add("work-item", "work");
+  const projectItems = projects
+    .map(
+      (project, index) => `
 
-  workItem.innerHTML = `
-      <img src="${work.img}" alt="${work.title}">
-      <div class="layer">
-        <h5>${work.title}</h5>
-        <p>${work.description || work.desc}</p>
-        <a href="${work.link}" target="_blank">
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </a>
+      <div class="carousel-item ${index === 0 ? "active" : ""}">
+
+        <div class="project-card">
+
+          <!-- IMAGE -->
+          <div class="project-image">
+
+            <img src="${project.img}" alt="${project.title}">
+
+          </div>
+
+          <!-- CONTENT -->
+          <div class="project-content">
+
+            <h3>${project.title}</h3>
+
+            <h5>${project.subtitle}</h5>
+
+            <div class="project-tech">
+
+              ${project.technologies}
+
+            </div>
+
+            <p>
+              ${project.description}
+            </p>
+
+            <a href="${project.github}" target="_blank"
+              class="project-btn">
+
+              <i class="fa-solid fa-square-arrow-up-right"></i>
+
+              View Project
+
+            </a>
+
+          </div>
+
+        </div>
+
       </div>
-    `;
 
-  workList.appendChild(workItem);
-});
+    `,
+    )
+    .join("");
+
+  projectsContainer.innerHTML = projectItems;
+}
+
+//* CALL FUNCTION
+renderProjects();
 
 //* social links
 const socialIcon = [
@@ -248,8 +242,6 @@ const experiences = [
       "Updated and maintained the organization’s website content, improving the accuracy and timeliness of information.",
 
       "Designed digital flyers for community programs, contributing to increased event awareness and participation.",
-
-      "Supported the organization’s online presence by improving layout and content consistency.",
     ],
   },
 ];

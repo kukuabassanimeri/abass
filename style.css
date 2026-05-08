@@ -822,12 +822,12 @@ body {
   #header {
     background-position: top 100px center;
     background-size: 280px;
-    padding-top: 80px;
-    padding-bottom: 60px;
+    padding-top: 40px;
+    padding-bottom: 20px;
   }
 
   .hero-section {
-    padding-top: 320px;
+    padding-top: 300px;
     text-align: center;
   }
 

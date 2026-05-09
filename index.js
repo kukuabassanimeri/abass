@@ -349,3 +349,17 @@ renderAboutSection();
     alert(`The "${event}" action is disabled on this page.`);
   });
 });
+
+//* CLOSE MOBILE NAVBAR AFTER CLICKING A LINK
+const navLinks = document.querySelectorAll(".nav-link");
+const navbarCollapse = document.getElementById("navbarNav");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+      toggle: false,
+    });
+
+    bsCollapse.hide();
+  });
+});

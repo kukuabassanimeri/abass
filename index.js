@@ -187,6 +187,18 @@ const aboutCards = [
 //* EXPERIENCE DATA
 const experiences = [
   {
+    role: "Data Migration Intern",
+    company: "Acentria Group",
+    duration: "May 2026 - Present",
+
+    responsibilities: [
+      "Supporting the migration of insurance data between legacy and modern systems within broking and reinsurance operations.",
+
+      "Conducting data quality checks and reconciliation to identify and resolve discrepancies during migration.",
+    ],
+  },
+
+  {
     role: "Mobile Forensic Analyst Intern",
     company: "DCI - ATPU",
     duration: "January 2026 - April 2026",

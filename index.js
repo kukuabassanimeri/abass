@@ -180,7 +180,7 @@ const aboutCards = [
     icon: "fa-solid fa-code",
     title: "Technologies",
     description:
-      "Python, Django, JavaScript, React, Bootstrap, HTML5, CSS3, PostgreSQL, MySQL, SQLite, Git, and GitHub.",
+      "Python, Django, PHP, Laravel, JavaScript, React, RESTful API, Mpesa API Integration, Bootstrap, HTML5, CSS3, PostgreSQL, MySQL, Git, and GitHub.",
   },
 ];
 

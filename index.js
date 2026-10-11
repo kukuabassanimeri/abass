@@ -188,7 +188,7 @@ const aboutCards = [
 const experiences = [
   {
     role: "Data Migration Intern",
-    company: "Acentria Group - Nairobi, Kenya",
+    company: "Acentria Group",
     duration: "May 2026 - September 2026",
 
     responsibilities: [
@@ -200,7 +200,7 @@ const experiences = [
 
   {
     role: "Mobile Forensic Analyst Intern",
-    company: "DCI - ATPU - Nairobi Kenya",
+    company: "DCI - ATPU",
     duration: "January 2026 - April 2026",
 
     responsibilities: [
@@ -214,7 +214,7 @@ const experiences = [
 
   {
     role: "IT Assistant Intern",
-    company: "Kadar Initiative for Community Empowerment - Kakuma, Kenya",
+    company: "Kadar Initiative for Community Empowerment",
     duration: "September 2023 - December 2023",
 
     responsibilities: [

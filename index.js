@@ -166,14 +166,14 @@ const aboutCards = [
     icon: "fa-solid fa-graduation-cap",
     title: "Education",
     description:
-      "Software Development student at KCA University and Entrepreneurial Leadership student at African Leadership University with strong interest in innovation and leadership.",
+      "Software Developer, Entrepreneurial Leader, Researcher with strong interest in innovation, technology, education advocacy and leadership.",
   },
 
   {
     icon: "fa-solid fa-lightbulb",
     title: "Skills",
     description:
-      "Frontend Development, Backend Development, REST APIs, Database Design, Research, Problem Solving, Leadership, and Technical Documentation.",
+      "Frontend Development, Backend Development, REST APIs, Database Design, Data Visualization, Research, Problem Solving, Leadership, and Technical Documentation.",
   },
 
   {
@@ -189,7 +189,7 @@ const experiences = [
   {
     role: "Data Migration Intern",
     company: "Acentria Group",
-    duration: "May 2026 - Present",
+    duration: "May 2026 - September 2026",
 
     responsibilities: [
       "Supporting the migration of insurance data between legacy and modern systems within broking and reinsurance operations.",

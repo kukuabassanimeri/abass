@@ -166,7 +166,7 @@ const aboutCards = [
     icon: "fa-solid fa-graduation-cap",
     title: "Education",
     description:
-      "Bacholar of Science in Software Development - KCA University <br> Bacholar of Science in Entrepreneurial Leadership - African Leadership University, Researcher with strong interest in innovation, technology, education advocacy and leadership.",
+      "Bacholar of Science in Software Development - KCA University <br> Bacholar of Science in Entrepreneurial Leadership - African Leadership University.",
   },
 
   {

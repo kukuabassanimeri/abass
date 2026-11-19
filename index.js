@@ -1,377 +1,114 @@
-//* form connection
+//* CONTACT FORM → GOOGLE SHEET
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbzlIo3uTVedzvIX0hb8Sk02IJZbbT_Xz3XRbfjsmcslwb-tRpo8hgZDmYAW73x92GmK/exec";
+
 const form = document.forms["submit-to-google-sheet"];
+const formMessage = document.getElementById("message");
+const submitBtn = form.querySelector("button[type='submit']");
+const submitLabel = submitBtn.textContent.trim();
+let messageTimer;
 
-//* form submission confirm
-const formSubmission = document.getElementById("message");
+function showFormMessage(text, isError = false) {
+  clearTimeout(messageTimer);
+  formMessage.textContent = text;
+  formMessage.classList.toggle("error", isError);
+  messageTimer = setTimeout(() => (formMessage.textContent = ""), 5000);
+}
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  fetch(scriptURL, { method: "POST", body: new FormData(form) })
-    .then((response) => {
-      formSubmission.innerHTML = "Message sent successfully";
-      setTimeout(function () {
-        formSubmission.innerHTML = "";
-      }, 1000);
-      form.reset(); //* clear the input fields
-    })
-    .catch((error) => console.error("Error!", error.message));
-});
-
-//* PROJECTS DATA
-const projects = [
-  {
-    img: "media/atpu.png",
-
-    title: "Exhibit Management System",
-
-    subtitle: "Anti-Terrorism Police Unit Project",
-
-    technologies:
-      "Python | Django REST APIs | JavaScript | React | Bootstrap | MySQL",
-
-    description:
-      "Developed a full-stack web application to digitize and manage forensic exhibit records within the ATPU ICT department.",
-
-    github: "https://github.com/kukuabassanimeri",
-  },
-
-  {
-    img: "media/chatisha_kca.png",
-
-    title: "Chatisha KCA",
-
-    subtitle: "KCA University Final Year Project",
-
-    technologies: "Python | Django | JavaScript | HTML5 | Bootstrap | MySQL",
-
-    description:
-      "Designed and developed a complaint management system for KCA University to streamline communication between administration and students.",
-
-    github: "https://github.com/kukuabassanimeri",
-  },
-
-  {
-    img: "media/doctor.png",
-
-    title: "MedEase",
-
-    subtitle: "Healthcare Queue Reservation System",
-
-    technologies: "Python | Django | JavaScript | Bootstrap | SQLite",
-
-    description:
-      "Developed a web-based healthcare queue reservation platform for Kakuma residents.",
-
-    github: "https://github.com/kukuabassanimeri/MedEase.git",
-  },
-];
-
-//* RENDER PROJECTS
-function renderProjects() {
-  const projectsContainer = document.getElementById("projects-container");
-
-  const projectItems = projects
-    .map(
-      (project, index) => `
-
-      <div class="carousel-item ${index === 0 ? "active" : ""}">
-
-        <div class="project-card">
-
-          <!-- IMAGE -->
-          <div class="project-image">
-
-            <img src="${project.img}" alt="${project.title}">
-
-          </div>
-
-          <!-- CONTENT -->
-          <div class="project-content">
-
-            <h3>${project.title}</h3>
-
-            <h5>${project.subtitle}</h5>
-
-            <div class="project-tech">
-
-              ${project.technologies}
-
-            </div>
-
-            <p>
-              ${project.description}
-            </p>
-
-            <a href="${project.github}" target="_blank"
-              class="project-btn">
-
-              <i class="fa-solid fa-square-arrow-up-right"></i>
-
-              View Project
-
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    `,
-    )
-    .join("");
-
-  projectsContainer.innerHTML = projectItems;
-}
-
-//* CALL FUNCTION
-renderProjects();
-
-//* social links
-const socialIcon = [
-  {
-    link: "https://www.linkedin.com/in/kuku-abass",
-    icon: "fa-brands fa-linkedin",
-  },
-
-  {
-    link: "https://github.com/kukuabassanimeri",
-    icon: "fa-brands fa-github",
-  },
-];
-
-//* function to load social icons
-const socialLinks = document.querySelector(".social-icons");
-socialIcon.forEach((social) => {
-  const socialLink = document.createElement("a");
-  socialLink.classList.add("fa-brands");
-  socialLink.href = social.link;
-  socialLink.target = "_blank";
-  socialLink.innerHTML = `<i class="${social.icon}"></i>`;
-  socialLinks.appendChild(socialLink);
-});
-
-//* ABOUT SECTION DATA
-const aboutCards = [
-  {
-    icon: "fa-solid fa-user",
-    title: "Who I'm",
-    description:
-      "I am a passionate Software Developer and Researcher focused on building impactful digital solutions that solve real-world challenges in education, technology, and community empowerment.",
-  },
-
-  {
-    icon: "fa-solid fa-graduation-cap",
-    title: "Education",
-    description:
-      "Bacholar of Science in Software Development - KCA University <br> Bacholar of Science in Entrepreneurial Leadership - African Leadership University.",
-  },
-
-  {
-    icon: "fa-solid fa-lightbulb",
-    title: "Skills",
-    description:
-      "Frontend Development, Backend Development, REST APIs, Database Design, Data Visualization, Research, Problem Solving, Leadership, and Technical Documentation.",
-  },
-
-  {
-    icon: "fa-solid fa-code",
-    title: "Technologies",
-    description:
-      "Python, Django, PHP, Laravel, JavaScript, React, RESTful API, Mpesa API Integration, Bootstrap, HTML5, CSS3, PostgreSQL, MySQL, Git, and GitHub.",
-  },
-];
-
-//* EXPERIENCE DATA
-const experiences = [
-  {
-    role: "Data Migration Intern",
-    company: "Acentria Group",
-    duration: "May 2026 - September 2026",
-
-    responsibilities: [
-      "Supporting the migration of insurance data between legacy and modern systems within broking and reinsurance operations.",
-
-      "Conducting data quality checks and reconciliation to identify and resolve discrepancies during migration.",
-    ],
-  },
-
-  {
-    role: "Mobile Forensic Analyst Intern",
-    company: "DCI - ATPU",
-    duration: "January 2026 - April 2026",
-
-    responsibilities: [
-      "Documented 50+ exhibit cases, ensuring 90% accuracy in exhibit memo forms and maintaining proper chain of custody.",
-
-      "Designed and developed an Exhibit Management System that reduced manual record-keeping by 40%.",
-
-      "Performed mobile forensic data extraction and analysis on multiple device types, supporting investigative operations.",
-    ],
-  },
-
-  {
-    role: "IT Assistant Intern",
-    company: "Kadar Initiative for Community Empowerment",
-    duration: "September 2023 - December 2023",
-
-    responsibilities: [
-      "Updated and maintained the organization’s website content, improving the accuracy and timeliness of information.",
-
-      "Designed digital flyers for community programs, contributing to increased event awareness and participation.",
-    ],
-  },
-];
-
-//* RENDER ABOUT SECTION
-function renderAboutSection() {
-  const main = document.getElementById("main");
-
-  const cards = aboutCards
-    .map(
-      (card) => `
-  
-    <div class="col-lg-3 col-md-6 mb-4">
-
-      <div class="about-card">
-
-        <div class="about-icon">
-          <i class="${card.icon}"></i>
-        </div>
-
-        <h4>${card.title}</h4>
-
-        <p>${card.description}</p>
-
-      </div>
-
-    </div>
-  
-  `,
-    )
-    .join("");
-
-  //* EXPERIENCE HTML
-  const experienceHtml = experiences
-    .map(
-      (experience) => `
-
-    <div class="experience-item">
-
-      <div class="experience-dot"></div>
-
-      <div class="experience-content">
-
-        <div class="experience-header">
-
-          <h4>${experience.role}</h4>
-
-          <span>${experience.duration}</span>
-
-        </div>
-
-        <h5>${experience.company}</h5>
-
-        <ul>
-
-          ${experience.responsibilities
-            .map((item) => `<li>${item}</li>`)
-            .join("")}
-
-        </ul>
-
-      </div>
-
-    </div>
-
-  `,
-    )
-    .join("");
-
-  main.innerHTML = `
-  
-<section id="about">
-
-  <div class="container">
-
-    <!-- ABOUT TITLE -->
-    <div class="text-center mb-5">
-
-      <h2 class="about-title">
-        About Me
-      </h2>
-
-      <p class="about-subtitle">
-        Learn more about my background, education, skills, and technologies.
-      </p>
-
-    </div>
-
-    <!-- ABOUT CARDS -->
-    <div class="row">
-
-      ${cards}
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- EXPERIENCE SECTION -->
-<section id="experience">
-
-  <div class="container">
-
-    <!-- SECTION TITLE -->
-    <div class="text-center mb-5">
-
-      <h2 class="experience-title">
-        Experience
-      </h2>
-
-      <p class="experience-subtitle">
-        My professional journey and practical experiences in technology and digital innovation.
-      </p>
-
-    </div>
-
-    <!-- EXPERIENCE CARD -->
-    <div class="experience-card">
-
-      ${experienceHtml}
-
-    </div>
-
-  </div>
-
-</section>
-  
-`;
-}
-
-renderAboutSection();
-
-//* Prevent copy, cut and paste
-["copy", "paste", "cut"].forEach((event) => {
-  document.addEventListener(event, (e) => {
-    e.preventDefault();
-    alert(`The "${event}" action is disabled on this page.`);
-  });
-});
-
-//* CLOSE MOBILE NAVBAR AFTER CLICKING A LINK
-const navLinks = document.querySelectorAll(".nav-link");
-const navbarCollapse = document.getElementById("navbarNav");
-
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-      toggle: false,
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending...";
+
+  try {
+    const response = await fetch(scriptURL, {
+      method: "POST",
+      body: new FormData(form),
     });
+    if (!response.ok) throw new Error(response.statusText);
 
-    bsCollapse.hide();
-  });
+    showFormMessage("Message sent successfully. Thank you!");
+    form.reset();
+  } catch (error) {
+    console.error("Form submission error:", error);
+    showFormMessage(
+      "Something went wrong. Please try again or email me directly.",
+      true,
+    );
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = submitLabel;
+  }
 });
+
+//* ACTIVE SIDEBAR LINK ON SCROLL
+const navLinks = document.querySelectorAll(".aka-nav-link");
+const sections = [...navLinks]
+  .map((link) => document.querySelector(link.getAttribute("href")))
+  .filter(Boolean);
+
+const navObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      navLinks.forEach((link) =>
+        link.classList.toggle(
+          "active",
+          link.getAttribute("href") === `#${entry.target.id}`,
+        ),
+      );
+    });
+  },
+  { rootMargin: "-45% 0px -50% 0px" },
+);
+
+sections.forEach((section) => navObserver.observe(section));
+
+//* SCROLL PROGRESS BAR
+const progressBar = document.querySelector(".aka-progress");
+
+function updateProgress() {
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollable > 0 ? window.scrollY / scrollable : 0;
+  progressBar.style.transform = `scaleX(${progress})`;
+}
+
+window.addEventListener("scroll", updateProgress, { passive: true });
+updateProgress();
+
+//* REVEAL ON SCROLL
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (!reduceMotion) {
+  const revealItems = document.querySelectorAll(`
+    .aka-education-intro, .aka-education-card,
+    .aka-skills-intro, .aka-tech-item, .aka-code-card,
+    .aka-projects-intro, .aka-project-card, .aka-projects-bottom,
+    .aka-experience-intro, .aka-experience-item,
+    .aka-contact-intro, .aka-contact-card
+  `);
+
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.12 },
+  );
+
+  revealItems.forEach((item) => {
+    // Stagger items that sit side by side in the same container
+    const siblings = [...item.parentElement.children];
+    const index = siblings.indexOf(item) % 6;
+    item.style.setProperty("--aka-delay", `${index * 0.06}s`);
+
+    item.classList.add("aka-reveal");
+    revealObserver.observe(item);
+  });
+}
+
+//* FOOTER YEAR
+document.getElementById("year").textContent = new Date().getFullYear();

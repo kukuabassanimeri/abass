@@ -1,303 +1,717 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AKA</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Abass Kuku Animeri — Software Developer & Researcher based in Nairobi, Kenya.">
+    <title>AKA | Abass Kuku Animeri</title>
+    <meta name="theme-color" content="#080d10">
+    <meta property="og:title" content="Abass Kuku Animeri | Software Developer & Researcher">
+    <meta property="og:description" content="I build digital solutions for real people — software, research and community impact.">
+    <meta property="og:image" content="media/me.jpeg">
+    <link rel="icon" type="image/png" href="media/aka.png">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/caeb9ec53e.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="media/aka.png">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!--Header-->
-    <div id="header">
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
-            <div class="container">
+    <!-- SCROLL PROGRESS -->
+    <div class="aka-progress" aria-hidden="true"></div>
 
-                <!-- Logo -->
-                <a class="navbar-brand logo" href="#">
-                    AKA
-                </a>
+    <!-- VERTICAL NAVIGATION -->
+    <aside class="aka-sidebar">
 
-                <!-- Mobile Toggle Button -->
-                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav">
+        <a href="#header" class="aka-logo" aria-label="Back to top">AK</a>
 
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Navbar Links -->
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-
-                    <ul class="navbar-nav gap-lg-3 text-center">
-
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#header">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#experience">Experiences</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#projects">Projects</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
+        <nav class="aka-nav" aria-label="Main navigation">
+            <a href="#header" class="aka-nav-link active" aria-label="Home">
+                <i class="fa-solid fa-house"></i>
+            </a>
+            <a href="#education" class="aka-nav-link" aria-label="Education">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </a>
+            <a href="#skills" class="aka-nav-link" aria-label="Skills">
+                <i class="fa-solid fa-code"></i>
+            </a>
+            <a href="#projects" class="aka-nav-link" aria-label="Projects">
+                <i class="fa-solid fa-table-cells-large"></i>
+            </a>
+            <a href="#experience" class="aka-nav-link" aria-label="Experience">
+                <i class="fa-solid fa-file-lines"></i>
+            </a>
+            <a href="#contact" class="aka-nav-link" aria-label="Contact">
+                <i class="fa-regular fa-envelope"></i>
+            </a>
         </nav>
 
-        <!-- Floating Developer Card -->
-        <div class="floating-card floating-left">
-            <i class="fa-solid fa-code"></i>
-            <span>Developer</span>
+        <div class="aka-sidebar-note">
+            Let's build<br>
+            something<br>
+            great.
+            <span></span>
         </div>
 
-        <!-- Floating Research Card -->
-        <div class="floating-card floating-right">
-            <i class="fa-solid fa-microscope"></i>
-            <span>Researcher</span>
-        </div>
+    </aside>
 
-        <!-- Hero Section -->
-        <div class="container hero-section">
 
-            <div class="row align-items-center min-vh-100">
+    <!-- MAIN CONTENT -->
+    <main class="aka-main">
 
-                <!-- Left Content -->
-                <div class="col-lg-6">
+        <!-- HERO -->
+        <header id="header" class="aka-hero aka-section">
+            <div class="aka-hero-inner">
 
-                    <!-- Full Name -->
-                    <h1 class="hero-title">
-                        ABASS KUKU ANIMERI
+                <div class="aka-hero-content">
+
+                    <span class="aka-eyebrow"><span></span>Developer &amp; Researcher</span>
+
+                    <h1>
+                        I build digital<br>
+                        solutions for real<br>
+                        <span>people.</span>
                     </h1>
 
-                    <!-- Small Description -->
-                    <p class="hero-description">
-                        Software Developer & Researcher building scalable software solutions and conducting impactful
-                        research
-                        focused on education, technology, and community empowerment.
+                    <p class="aka-description">
+                        I'm a software developer and researcher who builds scalable
+                        software solutions and conducts impactful research focused on
+                        community empowerment.
                     </p>
 
-                    <!-- Buttons -->
-                    <div class="hero-buttons">
-
-                        <a href="#contact" class="custom-btn-outline">
-                            Let's Talk
+                    <div class="aka-hero-actions">
+                        <a href="#projects" class="aka-primary-btn">
+                            Explore My Work
                         </a>
+                        <a href="#contact" class="aka-secondary-btn">
+                            Get in Touch
+                        </a>
+                    </div>
 
+                    <div class="aka-hero-stats">
+                        <div>
+                            <strong>4</strong>
+                            <span>Internships</span>
+                        </div>
+                        <div>
+                            <strong>3</strong>
+                            <span>Projects Built</span>
+                        </div>
+                        <div>
+                            <strong>2</strong>
+                            <span>Degrees</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="aka-hero-visual">
+
+                    <div class="aka-image-decoration"></div>
+
+                    <div class="aka-image-frame">
+                        <img src="media/me.jpeg" alt="Abass Kuku Animeri">
+                    </div>
+
+                    <div class="aka-handwriting">
+                        Code.<br>
+                        Research.<br>
+                        Impact.
+                    </div>
+
+                    <div class="aka-profile-card">
+                        <h5>ABASS KUKU ANIMERI</h5>
+                        <p>Software Developer &amp; Researcher</p>
+
+                        <div class="aka-profile-detail">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Nairobi, Kenya</span>
+                        </div>
+
+                        <div class="aka-profile-detail">
+                            <i class="fa-regular fa-envelope"></i>
+                            <a href="mailto:abasskuku@gmail.com">abasskuku@gmail.com</a>
+                        </div>
                     </div>
 
                 </div>
 
             </div>
+        </header>
 
-        </div>
-    </div> 
 
-    <!--About-->
-    <main id="main">
-        <!--Inject js code for about -->
-    </main>
+        <!-- EDUCATION -->
+        <section id="education" class="aka-education aka-section">
+            <div class="aka-container">
 
-    <!-- PROJECTS SECTION -->
-    <section id="projects">
+                <div class="aka-education-intro">
+                    <div>
+                        <span class="aka-eyebrow"><span></span>Education</span>
+                        <h2>Where I<br><span>learned.</span></h2>
+                    </div>
 
-        <div class="container">
-
-            <!-- Title -->
-            <div class="text-center mb-5">
-
-                <h2 class="projects-title">
-                    Projects
-                </h2>
-
-                <p class="projects-subtitle">
-                    Some of the software solutions and systems I have developed.
-                </p>
-
-            </div>
-
-            <!-- Carousel -->
-            <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel">
-
-                <!-- Inject JS Projects -->
-                <div class="carousel-inner" id="projects-container">
-
+                    <p>
+                        My academic background combines technical software engineering
+                        with entrepreneurial leadership, which shapes how I build
+                        technology that serves people and communities.
+                    </p>
                 </div>
 
-                <!-- Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel"
-                    data-bs-slide="prev">
+                <div class="aka-education-grid">
 
-                    
+                    <!-- KCA UNIVERSITY -->
+                    <article class="aka-education-card">
+                        <div class="aka-education-top">
+                            <div class="aka-education-icon">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <span class="aka-education-date">2023 – 2026</span>
+                        </div>
 
-                </button>
+                        <h3>Bachelor of Science in Software Development</h3>
+                        <h4>KCA University <span>·</span> Nairobi, Kenya</h4>
 
-                <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel"
-                    data-bs-slide="next">
-
-                   
-
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact">
-
-        <div class="container">
-
-            <!-- TITLE -->
-            <div class="text-center mb-5">
-
-                <h2 class="contact-title">
-                    Contact Me
-                </h2>
-
-                <p class="contact-subtitle">
-                    Feel free to reach out for collaborations, projects, research, or opportunities.
-                </p>
-
-            </div>
-
-            <div class="row g-4 align-items-stretch">
-
-                <!-- LEFT SIDE -->
-                <div class="col-lg-5">
-
-                    <div class="contact-info-card h-100">
-
-                        <h3>
-                            Let's Connect
-                        </h3>
-
-                        <p class="contact-text">
-                            I'm always open to discussing software development,
-                            research opportunities, internships, and collaborations.
+                        <p>
+                            Studied software engineering, web development, databases, and
+                            systems design. Final year project: Chatisha KCA, a student
+                            complaint management platform.
                         </p>
 
-                        <!-- EMAIL -->
-                        <div class="contact-item">
+                        <div class="aka-education-tags">
+                            <span>Software Engineering</span>
+                            <span>Web Development</span>
+                            <span>Databases</span>
+                        </div>
+                    </article>
 
-                            <div class="contact-icon">
-                                <i class="fa-solid fa-paper-plane"></i>
+                    <!-- AFRICAN LEADERSHIP UNIVERSITY -->
+                    <article class="aka-education-card">
+                        <div class="aka-education-top">
+                            <div class="aka-education-icon">
+                                <i class="fa-solid fa-lightbulb"></i>
                             </div>
-
-                            <div>
-                                <span>Email</span>
-                                <p>
-                                    abasskuku@gmail.com
-                                </p>
-                            </div>
-
+                            <span class="aka-education-date">2023 – 2026</span>
                         </div>
 
-                        <!-- PHONE -->
-                        <div class="contact-item">
+                        <h3>Bachelor of Science in Entrepreneurial Leadership</h3>
+                        <h4>African Leadership University</h4>
 
-                            <div class="contact-icon">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
+                        <p>
+                            Focused on leadership, problem-solving, and building ventures
+                            that create social impact, with an emphasis on
+                            community-driven solutions.
+                        </p>
 
-                            <div>
-                                <span>Phone</span>
-                                <p>
-                                    +254 115 207 210
-                                </p>
-                            </div>
-
+                        <div class="aka-education-tags">
+                            <span>Leadership</span>
+                            <span>Entrepreneurship</span>
+                            <span>Research</span>
                         </div>
-
-                        <!-- SOCIAL LINKS -->
-                        <div class="social-icons">
-
-                            <!-- Inject JS -->
-
-                        </div>
-
-                    </div>
+                    </article>
 
                 </div>
 
-                <!-- RIGHT SIDE -->
-                <div class="col-lg-7">
+            </div>
+        </section>
 
-                    <div class="contact-form-card h-100">
+        <!-- SKILLS -->
+        <section id="skills" class="aka-skills aka-section">
+            <div class="aka-skills-inner">
 
-                        <form name="submit-to-google-sheet">
+                <div class="aka-skills-intro">
 
-                            <div class="row">
+                    <span class="aka-eyebrow"><span></span>My Toolkit</span>
 
-                                <div class="col-md-6">
+                    <h2>Skills I work<br>with.</h2>
 
-                                    <input type="text" name="Name" placeholder="Full Name" required>
+                    <p>
+                        I continuously learn and improve. Here are the tools and
+                        technologies I use to bring ideas to life.
+                    </p>
 
-                                </div>
+                    <a href="#experience" class="aka-text-link">
+                        Explore my experience
+                    </a>
 
-                                <div class="col-md-6">
+                </div>
 
-                                    <input type="email" name="Email" placeholder="Email Address" required>
+                <div class="aka-tech-grid">
+                    <div class="aka-tech-item"><i class="fa-brands fa-python python"></i><span>Python</span></div>
+                    <div class="aka-tech-item"><i class="fa-brands fa-js javascript"></i><span>JavaScript</span></div>
+                    <div class="aka-tech-item"><span class="aka-text-icon django">dj</span><span>Django</span></div>
+                    <div class="aka-tech-item"><span class="aka-text-icon drf">DRF</span><span>Django REST</span></div>
+                    <div class="aka-tech-item"><i class="fa-brands fa-react react"></i><span>React</span></div>
+                    <div class="aka-tech-item"><i class="fa-brands fa-laravel laravel"></i><span>Laravel</span></div>
+                    <div class="aka-tech-item"><i class="fa-brands fa-php php"></i><span>PHP</span></div>
+                    <div class="aka-tech-item"><i class="fa-brands fa-docker docker"></i><span>Docker</span></div>
+                    <div class="aka-tech-item"><span class="aka-text-icon tailwind">TW</span><span>Tailwind CSS</span>
+                    </div>
+                    <div class="aka-tech-item"><i class="fa-brands fa-bootstrap bootstrap"></i><span>Bootstrap</span>
+                    </div>
+                    <div class="aka-tech-item"><i class="fa-brands fa-html5 html"></i><span>HTML5</span></div>
+                    <div class="aka-tech-item"><i class="fa-brands fa-css3-alt css"></i><span>CSS3</span></div>
+                    <div class="aka-tech-item"><i class="fa-solid fa-database mysql"></i><span>MySQL</span></div>
+                    <div class="aka-tech-item"><i class="fa-solid fa-database postgres"></i><span>PostgreSQL</span>
+                    </div>
+                    <div class="aka-tech-item"><i class="fa-brands fa-git-alt git"></i><span>Git &amp; GitHub</span>
+                    </div>
+                </div>
 
-                                </div>
+                <div class="aka-code-card" aria-hidden="true">
+                    <div class="aka-code-header">
+                        <div><span></span><span></span><span></span></div>
+                        <small>developer.js</small>
+                    </div>
+                    <pre><code><span class="code-purple">const</span> developer = {
+  name: <span class="code-green">"Abass Kuku Animeri"</span>,
+  role: <span class="code-green">"Software Developer"</span>,
+  skills: [
+    <span class="code-green">"Python"</span>,
+    <span class="code-green">"Django"</span>,
+    <span class="code-green">"React"</span>,
+    <span class="code-green">"Laravel"</span>
+  ],
+  mission:
+    <span class="code-green">"Build solutions that
+     empower communities"</span>
+};</code></pre>
+                </div>
 
+            </div>
+        </section>
+
+
+        <!-- PROJECTS -->
+        <section id="projects" class="aka-projects aka-section">
+            <div class="aka-container">
+
+                <div class="aka-projects-intro">
+                    <div>
+                        <span class="aka-eyebrow"><span></span>Selected Work</span>
+                        <h2>Things I've<br><span>built.</span></h2>
+                    </div>
+
+                    <p>
+                        A collection of software projects where I turn ideas into
+                        practical solutions, from digital management systems to
+                        platforms designed to improve access and communication.
+                    </p>
+                </div>
+
+                <div class="aka-project-grid">
+
+                    <!-- PROJECT 1: ATPU -->
+                    <article class="aka-project-card">
+
+                        <div class="aka-project-visual aka-project-atpu">
+                            <div class="aka-project-visual-top">
+                                <span>01 / MANAGEMENT SYSTEM</span>
                             </div>
 
-                            <textarea name="Message" rows="7" placeholder="Write your message..." required></textarea>
+                            <div class="aka-project-preview" aria-hidden="true">
+                                <div class="aka-preview-sidebar">
+                                    <span></span><span></span><span></span><span></span>
+                                </div>
+                                <div class="aka-preview-content">
+                                    <div class="aka-preview-heading"></div>
+                                    <div class="aka-preview-stats">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                    <div class="aka-preview-table">
+                                        <span></span><span></span><span></span><span></span>
+                                    </div>
+                                </div>
+                            </div>
 
-                            <button type="submit" class="contact-btn">
+                            <div class="aka-project-number">01</div>
+                        </div>
 
-                                Send Message
+                        <div class="aka-project-info">
+                            <div class="aka-project-category">Full-Stack Development</div>
 
-                            </button>
+                            <h3>ATPU Exhibit Management System</h3>
 
-                        </form>
+                            <p>
+                                A digital exhibit management system that streamlines the
+                                recording, tracking, and management of forensic exhibit
+                                records within the ATPU ICT department.
+                            </p>
 
-                        <!-- MESSAGE -->
-                        <span id="message"></span>
+                            <div class="aka-project-tags">
+                                <span>Python</span>
+                                <span>Django REST</span>
+                                <span>React</span>
+                                <span>MySQL</span>
+                            </div>
 
+                            <div class="aka-project-footer">
+                                <a href="https://github.com/kukuabassanimeri" target="_blank" rel="noopener noreferrer">
+                                    View on GitHub <i class="fa-brands fa-github"></i>
+                                </a>
+                                <span>01 / 03</span>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <!-- PROJECT 2: CHATISHA -->
+                    <article class="aka-project-card">
+
+                        <div class="aka-project-visual aka-project-chatisha">
+                            <div class="aka-project-visual-top">
+                                <span>02 / WEB APPLICATION</span>
+                            </div>
+
+                            <div class="aka-chatisha-preview" aria-hidden="true">
+                                <div class="aka-chatisha-header">
+                                    <span>CHATISHA</span>
+                                    <span></span>
+                                </div>
+                                <div class="aka-chatisha-message">
+                                    <div></div><span></span>
+                                </div>
+                                <div class="aka-chatisha-message right">
+                                    <div></div><span></span>
+                                </div>
+                                <div class="aka-chatisha-message">
+                                    <div></div><span></span>
+                                </div>
+                                <div class="aka-chatisha-input">
+                                    Write your message...
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </div>
+                            </div>
+
+                            <div class="aka-project-number">02</div>
+                        </div>
+
+                        <div class="aka-project-info">
+                            <div class="aka-project-category">Academic Project</div>
+
+                            <h3>Chatisha KCA</h3>
+
+                            <p>
+                                A complaint management platform that improves communication
+                                between KCA University students and administration, making it
+                                easier to submit and manage student concerns.
+                            </p>
+
+                            <div class="aka-project-tags">
+                                <span>Python</span>
+                                <span>Django</span>
+                                <span>JavaScript</span>
+                                <span>MySQL</span>
+                            </div>
+
+                            <div class="aka-project-footer">
+                                <a href="https://github.com/kukuabassanimeri" target="_blank" rel="noopener noreferrer">
+                                    View on GitHub <i class="fa-brands fa-github"></i>
+                                </a>
+                                <span>02 / 03</span>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <!-- PROJECT 3: MEDEASE -->
+                    <article class="aka-project-card">
+
+                        <div class="aka-project-visual aka-project-medease">
+                            <div class="aka-project-visual-top">
+                                <span>03 / COMMUNITY TECHNOLOGY</span>
+                            </div>
+
+                            <div class="aka-medease-preview" aria-hidden="true">
+                                <div class="aka-medease-icon">
+                                    <i class="fa-solid fa-heart-pulse"></i>
+                                </div>
+                                <div class="aka-medease-title">
+                                    <span>MedEase</span>
+                                    <small>Healthcare Queue Reservation</small>
+                                </div>
+                                <div class="aka-medease-booking">
+                                    <div>
+                                        <i class="fa-regular fa-calendar"></i>
+                                        <span>Book an appointment</span>
+                                    </div>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                                <div class="aka-medease-lines"><span></span><span></span></div>
+                            </div>
+
+                            <div class="aka-project-number">03</div>
+                        </div>
+
+                        <div class="aka-project-info">
+                            <div class="aka-project-category">Community-Focused Application</div>
+
+                            <h3>MedEase</h3>
+
+                            <p>
+                                A web-based healthcare queue reservation platform for Kakuma
+                                residents, helping users reserve their place in a healthcare
+                                queue more conveniently.
+                            </p>
+
+                            <div class="aka-project-tags">
+                                <span>Python</span>
+                                <span>Django</span>
+                                <span>JavaScript</span>
+                                <span>SQLite</span>
+                            </div>
+
+                            <div class="aka-project-footer">
+                                <a href="https://github.com/kukuabassanimeri/MedEase" target="_blank"
+                                    rel="noopener noreferrer">
+                                    View on GitHub <i class="fa-brands fa-github"></i>
+                                </a>
+                                <span>03 / 03</span>
+                            </div>
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <div class="aka-projects-bottom">
+                    <p>Interested in exploring more of my work?</p>
+                    <a href="https://github.com/kukuabassanimeri" target="_blank" rel="noopener noreferrer">
+                        Explore GitHub
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="aka-experience aka-section">
+            <div class="aka-container">
+
+                <div class="aka-experience-intro">
+                    <span class="aka-eyebrow"><span></span>My Journey</span>
+
+                    <h2>Experience that<br>creates <span>impact.</span></h2>
+
+                    <p>
+                        My professional journey brings together software development,
+                        technical problem-solving, research, and community-focused work.
+                        Each experience has shaped how I approach technology and the
+                        challenges it can help solve.
+                    </p>
+                </div>
+
+                <div class="aka-experience-timeline">
+
+                    <!-- ACENTRIA: SOFTWARE DEVELOPMENT -->
+                    <div class="aka-experience-item">
+                        <div class="aka-timeline-marker"><span></span></div>
+
+                        <div class="aka-experience-card">
+                            <div class="aka-experience-top">
+                                <span class="aka-experience-date">October 2026 – November 2026</span>
+                                <span class="aka-experience-type">Software Development</span>
+                            </div>
+
+                            <h3>Software Developer Intern</h3>
+                            <h4>Acentria Group <span>·</span> Nairobi, Kenya</h4>
+
+                            <p>
+                                Contributing to the development and enhancement of an internal
+                                Human Resource Management System, supporting the digitisation
+                                of organisational HR processes.
+                            </p>
+
+                            <ul>
+                                <li>Developing backend features and API functionality using Laravel.</li>
+                                <li>Building and integrating frontend components using React.</li>
+                                <li>Collaborating with the development team to implement and improve HR workflows.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ACENTRIA: DATA MIGRATION -->
+                    <div class="aka-experience-item">
+                        <div class="aka-timeline-marker"><span></span></div>
+
+                        <div class="aka-experience-card">
+                            <div class="aka-experience-top">
+                                <span class="aka-experience-date">May 2026 – September 2026</span>
+                                <span class="aka-experience-type">Data &amp; Technology</span>
+                            </div>
+
+                            <h3>Data Migration Intern</h3>
+                            <h4>Acentria Group <span>·</span> Nairobi, Kenya</h4>
+
+                            <p>
+                                Supported the migration of insurance data from legacy systems
+                                within broking and reinsurance operations, contributing to data
+                                quality, accuracy, and consistency across operational records.
+                            </p>
+
+                            <ul>
+                                <li>Supported the migration of client, policy, claims, and financial records.</li>
+                                <li>Performed data quality checks and reconciliation to identify and resolve
+                                    discrepancies.</li>
+                                <li>Worked with the team to ensure reliable data transfer between systems.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- DCI – ATPU -->
+                    <div class="aka-experience-item">
+                        <div class="aka-timeline-marker"><span></span></div>
+
+                        <div class="aka-experience-card">
+                            <div class="aka-experience-top">
+                                <span class="aka-experience-date">January 2026 – April 2026</span>
+                                <span class="aka-experience-type">Digital Forensics</span>
+                            </div>
+
+                            <h3>Mobile Forensic Analyst Intern</h3>
+                            <h4>DCI – ATPU <span>·</span> Kenya</h4>
+
+                            <p>
+                                Gained practical exposure to digital forensic processes and
+                                technical investigation, supporting the examination and analysis
+                                of digital evidence.
+                            </p>
+
+                            <ul>
+                                <li>Documented 50+ exhibit cases with 90% accuracy in exhibit memo forms, maintaining
+                                    proper chain of custody.</li>
+                                <li>Designed and developed an Exhibit Management System that reduced manual
+                                    record-keeping by 40%.</li>
+                                <li>Performed mobile forensic data extraction and analysis on multiple device types to
+                                    support investigations.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- KADAR INITIATIVE -->
+                    <div class="aka-experience-item">
+                        <div class="aka-timeline-marker"><span></span></div>
+
+                        <div class="aka-experience-card">
+                            <div class="aka-experience-top">
+                                <span class="aka-experience-date">September 2023 – December 2023</span>
+                                <span class="aka-experience-type">IT Support</span>
+                            </div>
+
+                            <h3>IT Assistant Intern</h3>
+                            <h4>Kadar Initiative for Community Empowerment <span>·</span> Kenya</h4>
+
+                            <p>
+                                Supported day-to-day IT operations and technology-related
+                                activities, gaining practical experience in technical support
+                                and organisational technology needs.
+                            </p>
+
+                            <ul>
+                                <li>Updated and maintained the organisation's website content, improving the accuracy
+                                    and timeliness of information.</li>
+                                <li>Designed digital flyers for community programs, contributing to increased event
+                                    awareness and participation.</li>
+                            </ul>
+                        </div>
                     </div>
 
                 </div>
 
             </div>
+        </section>
 
-        </div>
 
-    </section>
+        <!-- CONTACT -->
+        <section id="contact" class="aka-contact aka-section">
+            <div class="aka-container">
 
-    <!-- FOOTER -->
-    <footer class="footer">
+                <div class="aka-contact-intro">
+                    <span class="aka-eyebrow"><span></span>Get in Touch</span>
+                    <h2>Let's <span>connect.</span></h2>
+                    <p>Feel free to reach out for collaborations, projects, research, or opportunities.</p>
+                </div>
 
-        <div class="container">
+                <div class="aka-contact-grid">
 
+                    <div class="aka-contact-card">
+                        <h3>Contact Details</h3>
+
+                        <p class="aka-contact-text">
+                            I'm always open to discussing software development, research
+                            opportunities, internships, and collaborations.
+                        </p>
+
+                        <a class="aka-contact-item" href="mailto:abasskuku@gmail.com">
+                            <span class="aka-contact-icon"><i class="fa-solid fa-paper-plane"></i></span>
+                            <span>
+                                <small>Email</small>
+                                abasskuku@gmail.com
+                            </span>
+                        </a>
+
+                        <a class="aka-contact-item" href="tel:+254115207210">
+                            <span class="aka-contact-icon"><i class="fa-solid fa-phone"></i></span>
+                            <span>
+                                <small>Phone</small>
+                                +254 115 207 210
+                            </span>
+                        </a>
+
+                        <div class="aka-social-icons">
+                            <a href="https://www.linkedin.com/in/kuku-abass" target="_blank" rel="noopener noreferrer"
+                                aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/kukuabassanimeri" target="_blank" rel="noopener noreferrer"
+                                aria-label="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="aka-contact-card">
+                        <form name="submit-to-google-sheet" class="aka-contact-form">
+                            <div class="aka-form-row">
+                                <input type="text" name="Name" placeholder="Full Name" aria-label="Full Name" required>
+                                <input type="email" name="Email" placeholder="Email Address" aria-label="Email Address"
+                                    required>
+                            </div>
+
+                            <textarea name="Message" rows="7" placeholder="Write your message..." aria-label="Message"
+                                required></textarea>
+
+                            <button type="submit" class="aka-primary-btn aka-submit-btn">
+                                Send Message
+                            </button>
+                        </form>
+
+                        <p id="message" class="aka-form-message" role="status"></p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="aka-footer">
             <p>
-                Copyright © 2026 |
-                Built with <i class="fa-solid fa-heart"></i>
-                by <span>Abass</span>
+                &copy; <span id="year">2026</span> · Built with
+                <i class="fa-solid fa-heart"></i> by <span>Abass</span>
             </p>
+        </footer>
 
-        </div>
+    </main>
 
-    </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="index.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

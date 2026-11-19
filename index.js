@@ -77,7 +77,9 @@ window.addEventListener("scroll", updateProgress, { passive: true });
 updateProgress();
 
 //* REVEAL ON SCROLL
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const reduceMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+).matches;
 
 if (!reduceMotion) {
   const revealItems = document.querySelectorAll(`
@@ -100,7 +102,7 @@ if (!reduceMotion) {
   );
 
   revealItems.forEach((item) => {
-    // Stagger items that sit side by side in the same container
+    //* Stagger items that sit side by side in the same container
     const siblings = [...item.parentElement.children];
     const index = siblings.indexOf(item) % 6;
     item.style.setProperty("--aka-delay", `${index * 0.06}s`);
